@@ -29,7 +29,7 @@ class Checkbox extends Component {
         this.setState(_.extend({}, this.props.style, _.omit(this.props, 'style')))
     }
 
-    componentWillReceiveProps(nextProps) {
+    UNSAFE_componentWillReceiveProps(nextProps) {
         this.props = nextProps;
         this.setState({ checked: nextProps.checked});
     }
